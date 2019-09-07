@@ -13,6 +13,6 @@ RUN npm run build
 
 FROM nginx 
 EXPOSE 80
-COPY --from=builder /app/build /usr/share/nginx/htm
+COPY --from=builder /app/build /usr/share/nginx/html
 
 # The container having EXPOSE will be considered by the AWS as the one to deploy
